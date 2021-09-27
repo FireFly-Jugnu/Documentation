@@ -1,0 +1,12 @@
+site_name: Jugnu
+site_description: Jugnu - The Javascript framework for developing Firebase Apps
+nav:
+  - Home:
+    - Jugnu: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Limitations: limitations.md
+theme:
+  name: material
+  features:
+    - navigation.tabs
