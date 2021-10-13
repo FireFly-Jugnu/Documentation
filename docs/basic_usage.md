@@ -17,6 +17,10 @@ class Person{
 
     @DocumentField
     phone: String;
+
+    constructor(name: String){
+        this.name = name;
+    }
 }
 ```
 
@@ -38,6 +42,13 @@ personCollection.create(varun);
 const personList: Person[];
 personList = await personCollection.query([]); 
 console.log(personList);
+```
+
+## Query Single Document with Key
+```
+let p: Person;
+p = await personCollection.getDocument("Varun Verma");
+console.log("Person Details", p);
 ```
 
 ## Delete Document

@@ -4,7 +4,8 @@ nav:
   - Home:
     - Jugnu: index.md
     - Installation: installation.md
-    - Usage: usage.md
+    - Usage: basic_usage.md
+    - Reference Collections: reference_collections.md
     - Limitations: limitations.md
 theme:
   name: material
