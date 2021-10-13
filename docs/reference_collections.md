@@ -4,7 +4,7 @@ Firebase allows you to reference documents of other collections.
 Consider the example below of Person and Anddress
 
 ```
-@FirebaseCollection
+@FirebaseCollection()
 class Address {
     @DocumentKey
     addrKey: String = "";
@@ -19,7 +19,7 @@ class Address {
 
 The Person document has a address field that stores reference to the address
 ```
-@FirebaseCollection
+@FirebaseCollection()
 class Person{
 
     @DocumentKey

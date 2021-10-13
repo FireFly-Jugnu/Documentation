@@ -4,7 +4,7 @@ Jugnu is compaitable with other Javascript frameworks.
 ## Annotations
 Annotate your typescript classes and members. Create any class that represents an entity.
 ```
-@FirebaseCollection
+@FirebaseCollection()
 class Person{
 
     @DocumentKey

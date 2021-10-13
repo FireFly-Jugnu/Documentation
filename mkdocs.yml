@@ -6,6 +6,7 @@ nav:
     - Installation: installation.md
     - Usage: basic_usage.md
     - Reference Collections: reference_collections.md
+    - Annotation Details: annotations.md
     - Limitations: limitations.md
 theme:
   name: material
