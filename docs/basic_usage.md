@@ -7,7 +7,7 @@ Annotate your typescript classes and members. Create any class that represents a
 @FirebaseCollection()
 class Person{
 
-    @DocumentKey
+    @DocumentKey(DocumentKeyType.UserDefined)
     name: String;
 
     @DocumentField

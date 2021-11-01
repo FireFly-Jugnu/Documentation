@@ -6,7 +6,7 @@ Consider the example below of Person and Anddress
 ```
 @FirebaseCollection()
 class Address {
-    @DocumentKey
+    @DocumentKey(DocumentKeyType.UserDefined)
     addrKey: String = "";
 
     @DocumentField
@@ -22,7 +22,7 @@ The Person document has a address field that stores reference to the address
 @FirebaseCollection()
 class Person{
 
-    @DocumentKey
+    @DocumentKey(DocumentKeyType.UserDefined)
     name: String;
 
     @DocumentField
