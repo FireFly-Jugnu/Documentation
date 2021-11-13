@@ -7,6 +7,7 @@ nav:
     - Usage: basic_usage.md
     - Reference Collections: reference_collections.md
     - Annotation Details: annotations.md
+    - Pub-Sub: pub_sub.md
     - Limitations: limitations.md
 theme:
   name: material
