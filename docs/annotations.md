@@ -46,6 +46,14 @@ interface StorageFile{
 }
 ```
 
+## DocumentArrayField
+If there is an array of other entities, then declare it using the `DocumentArrayField`. 
+Pass the entity name to the decorator so that the framework can understand the underlying entity object and its annotations.
+```
+@DocumentArrayField(InvoicePayment)
+payments: InvoicePayment[];
+```
+
 ## AutoIncrement
 Annotate a property with `@AutoIncrement`
 
