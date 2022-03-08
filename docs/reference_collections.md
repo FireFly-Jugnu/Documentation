@@ -73,6 +73,54 @@ The person document is created with Address as a reference document
 ![Person Document](../images/person_document.png) 
 
 
+## Creating Document with collection of references
+We have seen how to store the refence of other documents. Sometimes, we have to store a collection of document references. 
+
+For e.g. store a list of many children in a Person Profile.
+
+```
+@FirebaseCollection()
+class Person {
+    @DocumentKey(jugnu.Types.DocumentKeyType.UserDefined)
+    id: string;
+
+    @DocumentField
+    name: string;
+
+    @DocumentField
+    parent: Person;     // Reference to Self Collection
+
+    @DocumentArrayField(Person)
+    children: Person[];   // Reference to Self Collection
+
+    constructor(id: string){
+        this.id = this.name = id;
+        this.children = [];
+    }
+}
+
+const createFunction = async() => { 
+
+    const vv = new Person("Varun");
+
+    vv.parent = new Person("Papa");
+
+    const beta = new Person("Beta");
+    const beti = new Person("Beti");
+    
+    vv.children.push(beta);
+    vv.children.push(beti);
+
+    const id = await personCollection.create(vv);
+    console.log(vv);
+
+};
+```
+The peron document is created with references
+![Person Document](../images/Person_Doc2.png) 
+
+
+
 ## Query Single Document with Key
 Querying document will also query the referenced documents and populate their properties.
 ```
@@ -93,6 +141,14 @@ Person {
   name: 'Varun Verma'
 }
 ```
+
+## Get Reference of the document
+To get a reference of the document : 
+```
+const addr = new Address("Home");
+const addressRef = addressCollection.getReference(addr);
+```
+
 
 ## Delete Document
 Delete will delete only the main document. The referenced document will not be deleted.
