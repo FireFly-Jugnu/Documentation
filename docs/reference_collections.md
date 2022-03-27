@@ -122,10 +122,12 @@ The peron document is created with references
 
 
 ## Query Single Document with Key
-Querying document will also query the referenced documents and populate their properties.
+Querying document will **NOT** expand the reference documents. This is the default behaviour. 
+
+However, you can pass the `expandRefrences = true` to also query the referenced documents and populate their properties.
 ```
 let p: Person;
-p = await personCollection.getDocument("Varun Verma");
+p = await personCollection.getDocument("Varun Verma", true);
 console.log("Person Details", p);
 ```
 The output will be: 
@@ -141,6 +143,8 @@ Person {
   name: 'Varun Verma'
 }
 ```
+
+In this case, the `homeAddress` is expanded
 
 ## Get Reference of the document
 To get a reference of the document : 
